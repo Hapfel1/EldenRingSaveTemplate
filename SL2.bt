@@ -6,7 +6,7 @@
 //   Version: 2.0
 //   Purpose: Reading an Elden Ring save file (PC .sl2/.co2, PlayStation memory.dat)
 //  Category: Game
-// File Mask: *.sl2;*.co2;*.cnv;*.cnvco2;memory.dat
+// File Mask: *.sl2;*.co2;memory.dat
 //  ID Bytes:
 //   History: 2.0 - PlayStation layout, field names and layouts from
 //                  er-save-manager docs/technical/save-file-structure.md,
@@ -154,7 +154,7 @@ typedef struct {
     uint32 CharacterType;           // always 0
     wchar_t CharacterName[0x10];
     uint16 CharacterNameTerminator <hidden = true>;
-    ubyte Gender;                   // body type
+    ubyte BodyType;
     ubyte ArcheType;                // starting class (CharaInitParam row)
     ubyte unk0xb8;                  // hash entry 3
     ubyte unk0xb9;
